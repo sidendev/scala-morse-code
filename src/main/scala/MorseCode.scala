@@ -1,5 +1,5 @@
 object MorseCode {
-  val morseCodeMap: Map[Char, String] = Map(
+  val englishToMorseCodeMap: Map[Char, String] = Map(
     // Letters
     'A' -> ".-",    'B' -> "-...",  'C' -> "-.-.",  'D' -> "-..",
     'E' -> ".",     'F' -> "..-.",  'G' -> "--.",   'H' -> "....",
@@ -13,11 +13,14 @@ object MorseCode {
     '4' -> "....-", '5' -> ".....", '6' -> "-....", '7' -> "--...",
     '8' -> "---..", '9' -> "----.",
     ' ' -> "/",
-    // Other Characters 
+    // Other Characters
     '.' -> ".-.-.-",  ',' -> "--..--",  '?' -> "..--..",  '\'' -> ".----.",
     '!' -> "-.-.--",  '/' -> "-..-.",   '(' -> "-.--.",   ')' -> "-.--.-",
     '&' -> ".-...",   ':' -> "---...",  ';' -> "-.-.-.",  '=' -> "-...-",
     '+' -> ".-.-.",   '-' -> "-....-",  '_' -> "..--.-",  '"' -> ".-..-.",
     '$' -> "...-..-", '@' -> ".--.-."
   )
+
+  val morseCodeToEnglishMap: Map[String, Char] =
+    englishToMorseCodeMap.map { case (char, morseString) => morseString -> char }
 }

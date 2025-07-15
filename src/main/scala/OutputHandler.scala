@@ -1,5 +1,5 @@
 object OutputHandler {
-  def printOutput(result: String): Unit = {
-    println(s"Morse Code: $result")
+  def printOutput(label: String, result: String): Unit = {
+    println(s"$label: $result")
   }
 }
