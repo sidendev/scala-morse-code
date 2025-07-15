@@ -38,4 +38,14 @@ class TranslatorSpec extends AnyFunSuite {
     assert(result == "... -.-. .- .-.. .- / .. ... / ..-. ..- -.")
   }
 
+  test("englishToMorseCode should return UNKNOWN for only one unsupported character") {
+    val result = Translator.englishToMorseCode("#")
+    assert(result == "UNKNOWN")
+  }
+
+  test("englishToMorseCode should return multiple UNKNOWNs for unsupported characters") {
+    val result = Translator.englishToMorseCode("#%&")
+    assert(result == "UNKNOWN UNKNOWN UNKNOWN")
+  }
+
 }
