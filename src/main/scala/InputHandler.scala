@@ -10,4 +10,3 @@ object InputHandler {
   def isMorse(input: String): Boolean =
     input.trim.forall(c => c == '.' || c == '-' || c == '/' || c == ' ')
 }
-

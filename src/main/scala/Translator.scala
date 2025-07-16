@@ -4,14 +4,14 @@ object Translator {
       .map(MorseCode.englishToMorseCodeMap.get)
       .map {
         case Some(value) => value
-        case None => "UNKNOWN" // handling unsupported characters
+        case None => "UNKNOWN" 
       }
       .mkString(" ")
   }
 
   def morseCodeToEnglish(input: String): String = {
     input
-      .split(" / ") // split up morse code where / exists
+      .split(" / ") 
       .map { word =>
         word.split(" ").map { value =>
           MorseCode.morseCodeToEnglishMap.getOrElse(value, "UNKNOWN")

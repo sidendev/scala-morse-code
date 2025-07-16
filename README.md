@@ -96,4 +96,3 @@ Enter text or Morse code to translate (or type 'exit' to quit):
 exit
 Goodbye!
 ```
-
